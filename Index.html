@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js" ></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -28,16 +29,16 @@
                 <ul class="pr-5 navbar-nav">
                     <div class="d-flex justify-content-center align-items-center ">
                         <li class="nav-item">
-                        <a class="nav-link" href="#">Lorem Ipsum</a>
+                        <a class="nav-link" href="#" ><strong>Lorem Ipsum</strong></a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="#">Lorem Ipsum</a>
+                        <a class="nav-link" href="#"><strong>Lorem Ipsum</strong></a>
                          </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Lorem Ipsum</a>
+                            <a class="nav-link" href="#"><strong>Lorem Ipsum</strong></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Lorem Ipsum</a>
+                            <a class="nav-link" href="#"><strong>Lorem Ipsum</strong></a>
                         </li>
                     </div>
                 </ul>
@@ -64,36 +65,27 @@
 
 
       </div>
-        <script>
-            var xhr = new XMLHttpRequest();
-            xhr.open("GET","products.json");
-            xhr.addEventListener("load",function(){
-                var resposta = xhr.responseText;
-                
-                // resposta.forEach(function(produto){
-                //    console.log(produto);
-                //});
-                //console.log(typeof produtos);
-                //console.log(resposta);
-                //renderiza(produtos);
+      
+      <script>
+          var xhr = new XMLHttpRequest();
+          xhr.open("GET","products.json");
+          xhr.addEventListener("load",function(){
+              var resposta = xhr.responseText;
+              resposta = JSON.parse(resposta)
 
+              var total = 0;
 
-            });
+              resposta.cart.item.forEach(function(produto){
+                 console.log(produto);
+                 $(".produtos").append("<img src="+produto.image+"><div>"+produto.name+"</div><div>Qtd: "+produto.quantity+"</div><div>"+produto.bestPriceFormated+"</div>")
+                 total = produto.bestPrice;
+              });
 
-            xhr.send();
+              console.log(total)
 
-            /*function renderiza(arg) {
-                var saida = "";
-                var i;
-                for(i = 0; i < arg.length; i++) {
-                saida += '<a href="' + arg[i].url + '">' + 
-                arr[i].display + '</a><br>';
-                consolo.log(saida);
-                    }
-            document.getElementById("teste").innerHTML = saida;
-                }   
-        */
-        </script>
+          });
+          xhr.send(); 
+      </script>
       
 </html>
 
