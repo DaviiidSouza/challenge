@@ -1,15 +1,35 @@
-* {
+body {
   font-family: "Montserrat", sans-serif;
 }
 
 .navbar {
-  border: 1px solid red !important;
+  border-bottom: 2px solid #9e9e9ea4;
 }
-.navbar #menu {
-  width: 100% !important;
+.navbar #menu .itens {
+  margin-right: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
-.navbar .collapse .itens a {
-  text-decoration: none !important;
+.navbar #menu .itens .search {
+  margin: 20px;
+}
+.navbar #menu .itens .person {
+  margin: 15px;
+}
+.navbar #menu .itens .dropdown-content {
+  width: 260px;
+  height: 200px;
+  display: none;
+  position: absolute;
+  top: 62px;
+  right: -20px;
+  background-color: #f0efef;
+  padding: 12px 16px;
+  z-index: 1;
+}
+.navbar #menu .itens .dropdown:hover .dropdown-content {
+  display: block;
 }
 
 /*# sourceMappingURL=estilo.css.map */
