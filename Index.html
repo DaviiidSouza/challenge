@@ -49,9 +49,9 @@
                         <a class="" href="#"><img src="/images/icon/baseline_shopping_cart_black_18dp.png" alt="">
 
                         <div class="dropdown-content arrow_box">
-                            <div class="produtos">Produtos</div>
-                            <div class="total" ><a href="#">Total do Pedido</a></div>
-                            <div class="finaliza" ><a href="#">Finalizar Compra</a></div>  
+                            <div class="produtos"></div>
+                            <div class="total" ><a href="#"></a></div>
+                            <div class="finaliza" ><a href="#"></a></div>  
                         </div>
                         
                 </div>
@@ -61,31 +61,34 @@
         </div>    
     </nav>
 
-      <div class="teste">
-
-
-      </div>
       
       <script>
-          var xhr = new XMLHttpRequest();
-          xhr.open("GET","products.json");
-          xhr.addEventListener("load",function(){
-              var resposta = xhr.responseText;
-              resposta = JSON.parse(resposta)
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET","products.json");
+            xhr.addEventListener("load",function(){
+                var resposta = xhr.responseText;
+                resposta = JSON.parse(resposta)
 
-              var total = 0;
+                var total = 0;
 
-              resposta.cart.item.forEach(function(produto){
-                 console.log(produto);
-                 $(".produtos").append("<img src="+produto.image+"><div>"+produto.name+"</div><div>Qtd: "+produto.quantity+"</div><div>"+produto.bestPriceFormated+"</div>")
-                 total = produto.bestPrice;
-              });
+                resposta.cart.item.forEach(function(produto){
+                    
+                    
+                    $(".produtos").append("<img src="+produto.image+"><div>"+produto.name+"</div><div>Qtd: "+produto.quantity+"</div><div>"+produto.bestPriceFormated+"</div>")
+                    total = total.toString();
+                    total = total.slice(0, -2) + total.slice(-2);
+                    total = produto.bestPrice;
+                });
+                
+                $(".total span").html(total);
 
-              console.log(total)
+           
 
           });
           xhr.send(); 
       </script>
+
+      
       
 </html>
 

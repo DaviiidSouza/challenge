@@ -33,10 +33,9 @@ body{
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
+            align-items: start;
             box-shadow: -6px 4px 8px -1px #88888873;
             width: 260px;
-            height: 200px;
             display: none;
             position: absolute;
             top: 50px;
@@ -44,38 +43,35 @@ body{
             background-color: #f0efef;
             padding: 12px 16px;
             z-index: 1;
+            .produtos{
+                display:flex;
+                flex-wrap: wrap;
+                float: left;
+                
+                img{
+                    width: 50px;
+                    height: 50px;
+                }
+                div{
+                    text-decoration: none;
+                    color: black
+                }
+            }
             .total{
-                margin-left: auto;
+                color: green;
+            }
+            .finaliza {
+
             }
             
         }
         .dropdown:hover .dropdown-content {
             display: block;
+            
           }
-          
+         
         } 
 
-
-        .arrow_box {
-            position: relative;
-            background: #f0efef;
-        }
-        .arrow_box:after {
-            
-            bottom: 95%;
-            left: 85%;
-            border: solid transparent;
-            content: " ";
-            height: 0;
-            width: 0;
-            position: absolute;
-            pointer-events: none;
-            border-color: rgba(240, 239, 239, 0);
-            border-bottom-color: #f0efef;
-            border-width: 30px;
-            margin-left: -30px;
-        }   
-        
         
     }
     

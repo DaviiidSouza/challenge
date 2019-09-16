@@ -32,10 +32,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   box-shadow: -6px 4px 8px -1px #88888873;
   width: 260px;
-  height: 200px;
   display: none;
   position: absolute;
   top: 50px;
@@ -44,29 +43,24 @@ body {
   padding: 12px 16px;
   z-index: 1;
 }
+.navbar #menu .itens .dropdown-content .produtos {
+  display: flex;
+  flex-wrap: wrap;
+  float: left;
+}
+.navbar #menu .itens .dropdown-content .produtos img {
+  width: 50px;
+  height: 50px;
+}
+.navbar #menu .itens .dropdown-content .produtos div {
+  text-decoration: none;
+  color: black;
+}
 .navbar #menu .itens .dropdown-content .total {
-  margin-left: auto;
+  color: green;
 }
 .navbar #menu .itens .dropdown:hover .dropdown-content {
   display: block;
-}
-.navbar #menu .arrow_box {
-  position: relative;
-  background: #f0efef;
-}
-.navbar #menu .arrow_box:after {
-  bottom: 95%;
-  left: 85%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  border-color: rgba(240, 239, 239, 0);
-  border-bottom-color: #f0efef;
-  border-width: 30px;
-  margin-left: -30px;
 }
 
 /*# sourceMappingURL=estilo.css.map */
