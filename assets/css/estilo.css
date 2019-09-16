@@ -5,24 +5,28 @@ body {
 .navbar {
   border-bottom: 2px solid #9e9e9ea4;
 }
+.navbar #menu #navbarNav {
+  padding-right: 50px !important;
+}
 .navbar #menu .itens {
+  margin-left: 0px;
   margin-right: 15px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 .navbar #menu .itens .search {
-  margin: 20px;
+  margin-right: 20px;
 }
 .navbar #menu .itens .person {
-  margin: 15px;
+  margin-right: 15px;
 }
 .navbar #menu .itens .dropdown-content {
   width: 260px;
   height: 200px;
   display: none;
   position: absolute;
-  top: 62px;
+  top: 55px;
   right: -20px;
   background-color: #f0efef;
   padding: 12px 16px;
@@ -30,6 +34,24 @@ body {
 }
 .navbar #menu .itens .dropdown:hover .dropdown-content {
   display: block;
+}
+.navbar #menu .arrow_box {
+  position: relative;
+  background: #f0efef;
+}
+.navbar #menu .arrow_box:after {
+  bottom: 95%;
+  left: 85%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(240, 239, 239, 0);
+  border-bottom-color: #f0efef;
+  border-width: 30px;
+  margin-left: -30px;
 }
 
 /*# sourceMappingURL=estilo.css.map */

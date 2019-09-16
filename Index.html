@@ -32,8 +32,7 @@
                         </li>
                         <li class="nav-item">
                         <a class="nav-link" href="#">Lorem Ipsum</a>
-        
-                        </l i>
+                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Lorem Ipsum</a>
                         </li>
@@ -42,28 +41,60 @@
                         </li>
                     </div>
                 </ul>
-                
+                <div class="itens">
+                        <a class="search" href="#"><img src="/images/icon/baseline_search_black_18dp.png" alt="">
+                        <a class="person" href="#"><img src="/images/icon/baseline_person_black_18dp.png" alt="">
+                        <div class="dropdown " >
+                            <a class="" href="#"><img src="/images/icon/baseline_shopping_cart_black_18dp.png" alt="">
+    
+                            <div class="dropdown-content arrow_box">
+                            <p>Hello World!</p>
+                            </div>
+                        </div>    
+                </div>
             </div>
-            <div class="itens">
-                    <a class="search" href="#"><img src="/images/icon/baseline_search_black_18dp.png" alt="">
-                    <a class="person" href="#"><img src="/images/icon/baseline_person_black_18dp.png" alt="">
-                    <div class="dropdown" >
-                        <a class="" href="#"><img src="/images/icon/baseline_person_black_18dp.png" alt="">
-
-                        <div class="dropdown-content">
-                        <p>Hello World!</p>
-                        </div>
-                    </div>    
-            </div>
+            
                         
                         
            
         </div>    
         
-      </nav>
-      <script>
-      
-      
-      </script>
+    </nav>
+
+      <div class="teste">
+
+
+      </div>
+        <script>
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET","products.json");
+            xhr.addEventListener("load",function(){
+                var resposta = xhr.responseText;
+                
+               // resposta.forEach(function(produto){
+                //    console.log(produto);
+                //});
+                //console.log(typeof produtos);
+                //console.log(resposta);
+                //renderiza(produtos);
+
+
+            });
+
+            xhr.send();
+
+            /*function renderiza(arg) {
+                var saida = "";
+                var i;
+                for(i = 0; i < arg.length; i++) {
+                saida += '<a href="' + arg[i].url + '">' + 
+                arr[i].display + '</a><br>';
+                consolo.log(saida);
+                    }
+            document.getElementById("teste").innerHTML = saida;
+                }   
+        */
+        </script>
       
 </html>
+
