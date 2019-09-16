@@ -1,3 +1,15 @@
+* {
+  font-family: "Montserrat", sans-serif;
+}
 
+.navbar {
+  border: 1px solid red !important;
+}
+.navbar #menu {
+  width: 100% !important;
+}
+.navbar .collapse .itens a {
+  text-decoration: none !important;
+}
 
 /*# sourceMappingURL=estilo.css.map */
