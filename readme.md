@@ -43,7 +43,7 @@ segue repositório que utilizei para participar do desafio.
 
 https://github.com/DaviiidSouza/challenge.git
 
-As tecnologias utilizadas foram: SASS como pré processador; Javascript/Jquery na requisição ajax.
+As tecnologias utilizadas foram: Bootstrap 4, SASS como pré processador; Javascript/Jquery na requisição ajax.
 
 Especificação: no Dropdown utilizado no Carrinho de Compras ele está com hover (passar o mouse por cima), portanto faz-se necessário utilizar o Scroll do mouse para visualizar os itens que foram consumidos pelo JSON.
 
