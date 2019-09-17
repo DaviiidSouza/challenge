@@ -45,9 +45,7 @@ https://github.com/DaviiidSouza/challenge.git
 
 As tecnologias utilizadas foram: SASS como pré processador; Javascript/Jquery na requisição ajax.
 
-Especificação: no Dropdown utilizado no Carrinho de Compras eu não consegui fixar o elemento quando ativo onclick, ele está com hover (passar o mouse por cima), portanto faz-se necessário utilizar o Scroll do mouse para visualizar os itens que foram consumidos pelo JSON.
-
-Caso haja a oportunidade de terminar o desafio me avise, pois não consegui estilizar a tela do carrinho de compras a tempo e a responsividade do menu.
+Especificação: no Dropdown utilizado no Carrinho de Compras ele está com hover (passar o mouse por cima), portanto faz-se necessário utilizar o Scroll do mouse para visualizar os itens que foram consumidos pelo JSON.
 
 Peço desculpas pelo horários, porém tentei me dedicar o máximo possível a este desafio.
 
