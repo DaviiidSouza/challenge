@@ -48,13 +48,13 @@
                     <div class="dropdown " >
                         <a class="" href="#"><img src="/images/icon/baseline_shopping_cart_black_18dp.png" alt="">
 
-                        <div class="dropdown-content arrow_box">
+                        <div class="dropdown-content">
                             <div class="produtos"></div>
-                            <div class="total" ><a href="#"></a></div>
-                            <div class="finaliza" ><a href="#"></a></div>  
+                            <div class="total" ></div>
+                            <div class="finaliza" ><span><strong>Finaliza Compra</strong></span></div>  
                         </div>
                         
-                </div>
+                    </div>
                       
                 </div>
             </div>
@@ -62,31 +62,7 @@
     </nav>
 
       
-      <script>
-            var xhr = new XMLHttpRequest();
-            xhr.open("GET","products.json");
-            xhr.addEventListener("load",function(){
-                var resposta = xhr.responseText;
-                resposta = JSON.parse(resposta)
-
-                var total = 0;
-
-                resposta.cart.item.forEach(function(produto){
-                    
-                    
-                    $(".produtos").append("<img src="+produto.image+"><div>"+produto.name+"</div><div>Qtd: "+produto.quantity+"</div><div>"+produto.bestPriceFormated+"</div>")
-                    total = total.toString();
-                    total = total.slice(0, -2) + total.slice(-2);
-                    total = produto.bestPrice;
-                });
-                
-                $(".total span").html(total);
-
-           
-
-          });
-          xhr.send(); 
-      </script>
+      <script src="renderiza-cart.js"></script>
 
       
       
